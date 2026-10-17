@@ -1,42 +1,40 @@
 # Privacy policy for Special Orders on POS
 
-Special Orders on POS helps retail stores take special orders at the till and manage a waiting list of items until customers collect them. This policy explains what personal information the app collects, why, where it is stored, and who it is shared with.
+*Last updated: 17 October 2026*
+
+Special Orders on POS is a Shopify app that helps retail stores take special orders at the till: items are ordered in from a supplier for a customer, held so they can't be fulfilled by mistake, and tracked on a waiting list until the customer collects them. To do that, the app stores a limited amount of data on behalf of the merchants who install it. This policy explains what we store, why, where it lives, and how it's deleted.
 
 ## Information we collect
 
-When store staff mark an item as a special order, the app stores a record of that order from the merchant's Shopify store:
+When store staff mark an item as a special order, we store:
 
-- Order details: order number, items (title, SKU, quantity), supplier name, store location, and the order's status in the app (waiting, arrived, ready, collected).
-- Customer details attached to the order: name, email address, and Shopify customer ID.
-- Staff account details for users who sign in to the app in Shopify admin: name and email address, as provided by Shopify's login session.
-- Shop-level settings the merchant configures, such as the customer email template.
+- **Store information** — the store's domain and the API credentials Shopify issues so the app can operate on the store.
+- **Order details** — the order number, the ordered-in items (title, SKU, quantity), supplier name, store location, and each item's status in the app (waiting, arrived, ready, collected).
+- **Customer details** — for customers with a special order: their name, email address, and Shopify customer ID. We hold this only for customers with special orders, not the store's whole customer base.
+- **Staff account details** — the name and email address of users who sign in to the app in Shopify admin, as provided by Shopify's login session.
+- **Shop settings** — settings the merchant configures, such as the customer email template.
 
-The app does not collect or store payment or card details. Payments are handled entirely by Shopify; the app reads paid and outstanding amounts from Shopify when needed and never stores them.
+We do not collect payment card details, passwords, or any data from store visitors or customers without a special order. Payments are handled entirely by Shopify; the app reads paid and outstanding amounts from Shopify when needed and never stores them.
 
-## How we use information
+## How we use it
 
-- To run the waiting list: showing staff which customer each item belongs to.
-- To notify customers: when staff choose "Tell customer", the app emails the customer that their items have arrived and are ready to collect.
-- To keep records accurate: the app listens to Shopify webhooks so that order and customer changes made in Shopify are reflected in the app.
+The data above is used solely to provide the app's features: running the waiting list, showing staff which customer each item belongs to, emailing a customer when staff choose "Tell customer" that their items are ready to collect, and keeping records accurate by listening to Shopify webhooks so order and customer changes made in Shopify are reflected in the app. We do not sell data, use it for advertising, marketing or profiling, or share it with third parties other than the providers below.
 
-We do not use personal information for advertising or profiling, and we never sell or rent it.
+## Where it's stored
 
-## Where information is stored and who we share it with
+The app runs on Fly.io (hosted in Amsterdam, NL) and stores its data in a Postgres database hosted by Supabase. Data is encrypted in transit (HTTPS/TLS). Customer notification emails are delivered by Resend, which receives the customer's name, email address, and the items in their order for each email sent. These providers process data only to deliver the service. The app processes this data on behalf of the merchant, who remains the controller of their customers' data.
 
-The app runs on Fly.io and stores its data in a Postgres database hosted by Supabase. Customer notification emails are delivered by Resend, which receives the customer's name, email address, and the items in their order for each email sent. These providers process data only to deliver the service. We do not share personal information with anyone else.
+## Retention and deletion
 
-## Data retention and deletion
+- **Customer redaction** — when a customer asks Shopify to erase their data, Shopify notifies the app and the cached customer name and email on their special orders are redacted.
+- **Data requests** — customer data requests are supported through Shopify's standard customer data request process.
+- **Uninstalling** — when a merchant uninstalls the app, its Shopify access tokens are deleted immediately, and all remaining data held for that store is deleted when Shopify sends its shop redaction request 48 hours later.
 
-- Customer redaction: when a customer asks Shopify to erase their data, Shopify notifies the app and the cached customer name and email on their special orders are redacted.
-- Customer data requests: supported through Shopify's standard customer data request process.
-- Uninstall: when a merchant uninstalls the app, its Shopify access tokens are deleted immediately, and all remaining data held for that store is deleted when Shopify sends its shop redaction request 48 hours later.
+## Changes to this policy
 
-## Changes to this privacy policy
+We may update this policy from time to time. Changes are posted on this page and take effect when posted.
 
-We may update this privacy policy from time to time. Changes will be posted on this page and are effective immediately once posted.
+## Contact
 
-## Contact us
-
-If you have any questions about this privacy policy, contact us at joeeverett673@gmail.com.
-
+Questions about this policy or your data: [joeeverett673@gmail.com](mailto:joeeverett673@gmail.com)
 
