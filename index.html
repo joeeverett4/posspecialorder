@@ -1,31 +1,42 @@
-<html>
-<head>
-  <title>Privacy policy for FunctionsPro</title>
-</head>
-<body>
+# Privacy policy for Special Orders on POS
 
-<h2 style="text-decoration:underline">Privacy policy for FunctionsPro</h2>
-<p>At FunctionsPro, we respect your privacy and are committed to protecting it. This Privacy Policy explains our policies and practices regarding the collection, use, storage, and disclosure of your personal information by FunctionsPro.</p>
+Special Orders on POS helps retail stores take special orders at the till and manage a waiting list of items until customers collect them. This policy explains what personal information the app collects, why, where it is stored, and who it is shared with.
 
-<h3>Information We Collect</h3>
+## Information we collect
 
-<p>As our app does not collect any personal information from its users, there is no information to be stored or used in any way.</p>
+When store staff mark an item as a special order, the app stores a record of that order from the merchant's Shopify store:
 
-<h3>Use of Information</h3>
+- Order details: order number, items (title, SKU, quantity), supplier name, store location, and the order's status in the app (waiting, arrived, ready, collected).
+- Customer details attached to the order: name, email address, and Shopify customer ID.
+- Staff account details for users who sign in to the app in Shopify admin: name and email address, as provided by Shopify's login session.
+- Shop-level settings the merchant configures, such as the customer email template.
 
-<p>Since we do not collect any personal information, we do not use any such information in any way.</p>
+The app does not collect or store payment or card details. Payments are handled entirely by Shopify; the app reads paid and outstanding amounts from Shopify when needed and never stores them.
 
-<h3>Disclosure of Personal Information</h3>
+## How we use information
 
-<p>We do not collect or disclose any personal information as our app does not collect such information.</p>
+- To run the waiting list: showing staff which customer each item belongs to.
+- To notify customers: when staff choose "Tell customer", the app emails the customer that their items have arrived and are ready to collect.
+- To keep records accurate: the app listens to Shopify webhooks so that order and customer changes made in Shopify are reflected in the app.
 
-<h3>Changes to This Privacy Policy</h3>
+We do not use personal information for advertising or profiling, and we never sell or rent it.
 
-<p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+## Where information is stored and who we share it with
 
-<h3>Contact Us</h3>
+The app runs on Fly.io and stores its data in a Postgres database hosted by Supabase. Customer notification emails are delivered by Resend, which receives the customer's name, email address, and the items in their order for each email sent. These providers process data only to deliver the service. We do not share personal information with anyone else.
 
-<p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at joeeverett673@gmail.com.</p>
-</body>
-</html>
+## Data retention and deletion
+
+- Customer redaction: when a customer asks Shopify to erase their data, Shopify notifies the app and the cached customer name and email on their special orders are redacted.
+- Customer data requests: supported through Shopify's standard customer data request process.
+- Uninstall: when a merchant uninstalls the app, its Shopify access tokens are deleted immediately, and all remaining data held for that store is deleted when Shopify sends its shop redaction request 48 hours later.
+
+## Changes to this privacy policy
+
+We may update this privacy policy from time to time. Changes will be posted on this page and are effective immediately once posted.
+
+## Contact us
+
+If you have any questions about this privacy policy, contact us at joeeverett673@gmail.com.
+
 
